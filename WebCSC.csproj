@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="n2wcw0mf.p0f~" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.1" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.4.0" />
@@ -21,5 +17,31 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+	<ItemGroup>
+		<BlazorWebAssemblyLazyLoad Include="System.Data.Common.dll" />
+		<BlazorWebAssemblyLazyLoad Include="Microsoft.VisualBasic.Core.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Transactions.Local.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Net.Mail.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Net.WebSockets.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.IO.Pipelines.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Formats.Asn1.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Net.Sockets.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Drawing.Primitives.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Net.HttpListener.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Diagnostics.Process.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Console.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Threading.Channels.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Security.Claims.dll" />
+		<BlazorWebAssemblyLazyLoad Include="Microsoft.AspNetCore.Authorization.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Net.WebSockets.Client.dll" />
+		<BlazorWebAssemblyLazyLoad Include="Microsoft.Extensions.FileSystemGlobbing.dll" />
 
+		<BlazorWebAssemblyLazyLoad Include="System.IO.Pipes.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Formats.Tar.dll" />
+		<BlazorWebAssemblyLazyLoad Include="Microsoft.Win32.Registry.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Net.Ping.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Drawing.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.Data.DataSetExtensions.dll" />
+		<BlazorWebAssemblyLazyLoad Include="System.IO.UnmanagedMemoryStream.dll" />
+	</ItemGroup>
 </Project>
