@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "WebCSC": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:2894;http://localhost:2895"
+    }
+  }
+}

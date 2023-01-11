@@ -1,0 +1,39 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+	</head>
+	<body>
+		<textarea cols="50" rows="20" id="txtCode">
+Console.WriteLine(3);
+string s = Console.ReadLine();
+Console.WriteLine($"s={s}");
+List<int> list =new ();
+list.Add(5);
+Console.WriteLine(list.Any());
+	</textarea>
+	<input type="button" value="run" id="btnRun" />
+	</body>	
+	<script src="_framework/blazor.webassembly.js" autostart="false"></script>	
+	<script src="webcsc.js"></script>
+	<script>		
+		window.onload = async function () {
+			await webcsc.start();
+		};		
+		document.getElementById("btnRun").onclick=async function(){
+			var txtCode = document.getElementById("txtCode");
+			try
+			{
+				//Use WebCSC.dll to replace System.Console.dll, so that Console.WriteLine() and Console.ReadLine() have browser-end behaviors.
+                var r = await webcsc.run(txtCode.value, { libraries: ["/_framework/WebCSC.dll"] });
+				if (!r.success)
+				{
+					alert("Error:" + r.message);
+				}
+			}
+			catch (e)
+			{
+				alert(e);
+			}
+		};
+	</script>
+</html>
